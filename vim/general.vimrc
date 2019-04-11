@@ -6,7 +6,7 @@ set nocursorline
 set termguicolors
 set nobackup
 set noswapfile
-
+set completeopt=longest,menuone,preview
 ""  Set line number
 set number
 set relativenumber
@@ -24,4 +24,13 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+"" COC section
+" Better display for messages
+set cmdheight=2
+
+" Smaller updatetime for CursorHold & CursorHoldI
+set updatetime=300
+
+set signcolumn=yes
 

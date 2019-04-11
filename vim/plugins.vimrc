@@ -1,9 +1,11 @@
-" Ale configuration
-let g:ale_fixers = ['eslint']
-let g:ale_fix_on_save = 1
+let g:lsc_server_commands = {'dart': 'dart_language_server'}
 
+" let g:ale_fix_on_save = 1
+" let g:ale_fixers = {
+" \   'javascript': ['eslint'],
+" \   'typescript': ['tslint'],
+" \}
 "" NERDTree configuration
-let g:NERDTreeChDirMode=2
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=1
@@ -27,12 +29,20 @@ let Grep_Default_Options = '-IR'
 let Grep_Skip_Files = '*.log *.db'
 let Grep_Skip_Dirs = '.git node_modules'
 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_ignore_case = 1
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#enable_camel_case = 1
-let g:deoplete#enable_refresh_always = 1
-let g:deoplete#max_abbr_width = 0
-let g:deoplete#max_menu_width = 0
-let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
+"" Omnisharp for cs files
+let g:OmniSharp_port = 2000
+let g:OmniSharp_start_server = 1
 
+"" Tern Configuration
+let g:tern_request_timeout = 1
+let g:tern_request_timeout = 6000
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
+
+
+let g:coc_global_extensions=[
+    \ "coc-tsserver",
+    \ "coc-json", 
+    \ "coc-css",
+    \ "coc-omni",
+\]
