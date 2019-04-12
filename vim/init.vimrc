@@ -7,18 +7,16 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
   "Typescript
- " Plug 'HerringtonDarkholme/yats.vim'
   Plug 'soywod/typescript.vim'
+  Plug 'w0rp/ale'
   " Javascript
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'sbdchd/neoformat'
   Plug 'tpope/vim-rhubarb'
   Plug 'vim-scripts/grep.vim'
   " Import
   Plug 'Galooshi/vim-import-js'
-  Plug 'soywod/typescript.vim'
     " Dart
   Plug 'dart-lang/dart-vim-plugin'
   " Tmux

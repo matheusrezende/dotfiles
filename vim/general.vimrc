@@ -8,6 +8,8 @@ set termguicolors
 set nobackup
 set noswapfile
 set completeopt=longest,menuone,preview
+set autoindent
+
 ""  Set line number
 set number
 set relativenumber

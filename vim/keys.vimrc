@@ -7,7 +7,7 @@ let mapleader=','
 
 " Maps leader e to toggle search with fzf
 nnoremap <silent> <leader>e :Files<CR>
-      
+
 "*****************************************************************************
 "" Abbreviations
 "*****************************************************************************
@@ -46,6 +46,8 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 
+"ALE
+noremap <leader>d :ALEFix<CR>
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
 vmap > >gv
@@ -54,7 +56,6 @@ vmap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-noremap <leader>d :ALEFix<CR>
 
 "" Toggle find
 nnoremap <silent> <leader>f :Rgrep<CR>

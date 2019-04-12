@@ -53,3 +53,16 @@ let g:coc_global_extensions=[
 
 " vim rainbow
 let g:rainbow_active = 1
+
+  let g:ale_fixers = {
+  \   'javascript': [
+  \       'eslint',
+  \   ],
+  \   'typescript': [
+  \       'tslint',
+  \   ],
+  \   'typescript.tsx': [
+  \       'tslint',
+  \   ],
+  \}
+
