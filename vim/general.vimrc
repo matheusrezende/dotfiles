@@ -1,7 +1,8 @@
 " Generic configurations that doesnt go anywhere else
 " Stylings
 syntax on
-color dracula
+colorscheme one
+set background=dark
 set nocursorline
 set termguicolors
 set nobackup
@@ -10,6 +11,8 @@ set completeopt=longest,menuone,preview
 ""  Set line number
 set number
 set relativenumber
+set backspace=indent,eol,start
+
 set lazyredraw
 " On pressing tab, insert 2 spaces
 set expandtab

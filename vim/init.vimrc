@@ -1,39 +1,45 @@
 " Specify a directory for plugins
 "
 call plug#begin('~/.local/share/nvim/plugged')
-" tpopek plugins
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
-  " linting and autofix
-  " Plug 'w0rp/ale'
-  " javascript linting files
-  Plug 'pangloss/vim-javascript'
-  " Nerdtree
-  Plug 'scrooloose/nerdtree'
-  " auto complete pairs
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'vim-scripts/grep.vim'
-  " general linting
-  "Javascript Plugins
-  Plug 'sheerun/vim-polyglot'
+  "Typescript
+ " Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'soywod/typescript.vim'
+  " Javascript
   Plug 'mxw/vim-jsx'
+  Plug 'pangloss/vim-javascript'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'sbdchd/neoformat'
+  Plug 'tpope/vim-rhubarb'
+  Plug 'vim-scripts/grep.vim'
+  " Import
   Plug 'Galooshi/vim-import-js'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'peitalin/vim-jsx-typescript'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  " Dart Plugins
+  Plug 'soywod/typescript.vim'
+    " Dart
   Plug 'dart-lang/dart-vim-plugin'
   " Tmux
   Plug 'christoomey/vim-tmux-navigator'
-  " THeme
-  Plug 'dracula/vim', { 'as': 'dracula' }
-  " For autocompletion features
+  " UI
+  Plug 'scrooloose/nerdtree'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'luochen1990/rainbow'
+  Plug 'rakr/vim-one', { 'as': 'one' }
+  "" HTML Bundle
+  Plug 'hail2u/vim-css3-syntax'
+  Plug 'gorodinskiy/vim-coloresque'
+  Plug 'tpope/vim-haml'
+  Plug 'mattn/emmet-vim'
+  "" Auto completion features
   Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+  "" Fuzzy search
   if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
   else
