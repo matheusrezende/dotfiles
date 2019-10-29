@@ -6,6 +6,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'luochen1990/rainbow'
   Plug 'jiangmiao/auto-pairs'
+  Plug 'HerringtonDarkholme/yats.vim'
   Plug 'tpope/vim-surround'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'joshdick/onedark.vim', { 'as': 'onedark' }
