@@ -12,6 +12,8 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'joshdick/onedark.vim', { 'as': 'onedark' }
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'dense-analysis/ale'
   Plug 'tpope/vim-repeat'
   Plug 'vim-airline/vim-airline'
   Plug 'dyng/ctrlsf.vim'

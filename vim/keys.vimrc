@@ -32,7 +32,7 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 
-noremap <leader>d :DartFmt<CR>
+noremap <leader>d :ALEFix<CR>
 
 "" Toggle find
 nnoremap <silent> <leader>f :Rgrep<CR>
@@ -62,13 +62,13 @@ nnoremap <leader>r :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
 nnoremap <leader>fl :FlutterEmulatorsLaunch<cr>
-
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+nmap <leader>b  <Plug>(coc-fix-current)
 
 " CTROL + SPACE triggers completion
 inoremap <silent><expr> <c-space> coc#refresh()

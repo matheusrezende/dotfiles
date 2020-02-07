@@ -1,11 +1,17 @@
 " Ale configuration
 let g:ale_linters = {
  \   'javascript': ['eslint'],
+ \   'typescript': ['eslint'],
+ \   'typescriptreact': ['eslint'],
  \   'dart': ['dartanalyzer'],
+ \   'scss': ['stylelint'],
  \}
 
 let g:ale_fixers = {
 \   'dart': ['dartfmt'],
+\   'javascript': ['eslint'],
+\   'typescript': ['eslint'],
+\   'typescriptreact': ['eslint'],
 \}
 
 let g:ale_fix_on_save = 1

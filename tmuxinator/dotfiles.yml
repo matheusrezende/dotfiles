@@ -1,8 +1,7 @@
-
 # /Users/matheusrezende/.config/tmuxinator/fitoApp.yml
 
-name: GymApp
-root: ~/www/matheus/gymApp/
+name: dotfiles
+root: ~/dotfiles/
 
 # Optional tmux socket
 # socket_name: foo
@@ -47,6 +46,5 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - xopen && code .
-        - npm start -- --reset-cache
-
+        - vim .
+        - git status

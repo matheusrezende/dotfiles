@@ -1,7 +1,7 @@
 # /Users/matheusrezende/.config/tmuxinator/fitoApp.yml
 
-name: fitoApp
-root: ~/www/fitogram/FitoApp/
+name: widget
+root: ~/www/fitogram/widget/
 
 # Optional tmux socket
 # socket_name: foo
@@ -47,4 +47,4 @@ windows:
       # synchronize: after
       panes:
         - vim .
-        - flutter emulators --launch apple_ios_simulator && flutter emulators --launch Pixel_3_XL_API_28
+        - npm start beta
