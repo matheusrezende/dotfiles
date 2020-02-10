@@ -6,7 +6,10 @@ export ZSH="/Users/matheusrezende/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes ZSH_THEME="robbyrussell" 
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -15,7 +18,6 @@ export ZSH="/Users/matheusrezende/.oh-my-zsh"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
-export LC_ALL=en_US.UTF-8
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -24,7 +26,6 @@ export LC_ALL=en_US.UTF-8
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-export EDITOR="vim"
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
 
@@ -121,7 +122,38 @@ source $HOME/dotfiles/tmuxinator.zsh
 
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
-# alias git='git '
-# alias back='checkout -'
-# alias trunk='checkout beta && git pull'
-# alias master='checkout master && git pull'
+alias git='git '
+alias back='checkout -'
+alias trunk='checkout beta && git pull'
+alias master='checkout master && git pull'
+alias gpo='git push origin "$(git symbolic-ref --short HEAD)"'
+alias rbm='checkout master && git pull && git checkout - && git rebase master'
+###-begin-graphql-completions-###
+#
+# yargs command completion script
+#
+# Installation: graphql completion >> ~/.bashrc
+#    or graphql completion >> ~/.bash_profile on OSX.
+#
+_yargs_completions()
+{
+    local cur_word args type_list
+
+    cur_word="${COMP_WORDS[COMP_CWORD]}"
+    args=("${COMP_WORDS[@]}")
+
+    # ask yargs to generate completions.
+    type_list=$(graphql --get-yargs-completions "${args[@]}")
+
+    COMPREPLY=( $(compgen -W "${type_list}" -- ${cur_word}) )
+
+    # if no match was found, fall back to filename completion
+    if [ ${#COMPREPLY[@]} -eq 0 ]; then
+      COMPREPLY=( $(compgen -f -- "${cur_word}" ) )
+    fi
+
+    return 0
+}
+complete -F _yargs_completions graphql
+###-end-graphql-completions-###
+
