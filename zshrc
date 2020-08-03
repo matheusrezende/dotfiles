@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,18 +116,20 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
+export PATH=$(go env GOPATH)/bin:$PATH
 
 source $HOME/dotfiles/tmuxinator.zsh
 
 export PATH="$PATH":"$HOME/.pub-cache/bin"
-
+alias ngrok="~/ngrok"
 alias git='git '
 alias back='checkout -'
 alias trunk='checkout beta && git pull'
 alias master='checkout master && git pull'
 alias gpo='git push origin "$(git symbolic-ref --short HEAD)"'
 alias rbm='checkout master && git pull && git checkout - && git rebase master'
+alias dockerstop='docker stop $(docker ps -aq)'
+alias dockerremove='docker rm $(docker ps -aq)'
 ###-begin-graphql-completions-###
 #
 # yargs command completion script
@@ -157,3 +159,11 @@ _yargs_completions()
 complete -F _yargs_completions graphql
 ###-end-graphql-completions-###
 
+
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/matheusrezende/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matheusrezende/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/matheusrezende/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matheusrezende/google-cloud-sdk/completion.zsh.inc'; fi

@@ -1,7 +1,7 @@
 # /Users/matheusrezende/.config/tmuxinator/fitoApp.yml
 
-name: widget
-root: ~/www/fitogram/widget/
+name: GoProject
+root: ~/www/goproject
 
 # Optional tmux socket
 # socket_name: foo
@@ -47,4 +47,4 @@ windows:
       # synchronize: after
       panes:
         - code .
-        - npm start team-2
+        - git status

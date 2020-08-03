@@ -2,22 +2,20 @@
 "
 call plug#begin('~/.local/share/nvim/plugged')
   Plug 'tpope/vim-sensible'
-  Plug 'dart-lang/dart-vim-plugin'
   Plug 'scrooloose/nerdtree'
   Plug 'luochen1990/rainbow'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'HerringtonDarkholme/yats.vim'
   Plug 'tpope/vim-surround'
+  Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'joshdick/onedark.vim', { 'as': 'onedark' }
+  Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'tpope/vim-commentary'
+  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
   Plug 'tpope/vim-fugitive'
-  Plug 'sheerun/vim-polyglot'
   Plug 'dense-analysis/ale'
   Plug 'tpope/vim-repeat'
   Plug 'vim-airline/vim-airline'
   Plug 'dyng/ctrlsf.vim'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'vim-airline/vim-airline-themes'
   if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'

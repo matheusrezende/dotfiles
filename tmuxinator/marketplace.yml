@@ -1,7 +1,7 @@
 # /Users/matheusrezende/.config/tmuxinator/fitoApp.yml
 
-name: widget
-root: ~/www/fitogram/widget/
+name: marketplace
+root: ~/www/fitogram/marketplace/
 
 # Optional tmux socket
 # socket_name: foo
@@ -46,5 +46,5 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - code .
-        - npm start team-2
+        - vim .
+        - npm start production
