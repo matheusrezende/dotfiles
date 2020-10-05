@@ -98,13 +98,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$PATH:$HOME/development/flutter/bin"
-
 
 
 
@@ -116,7 +112,6 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$(go env GOPATH)/bin:$PATH
 
 source $HOME/dotfiles/tmuxinator.zsh
 
@@ -162,8 +157,4 @@ complete -F _yargs_completions graphql
 
 
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/matheusrezende/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matheusrezende/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/matheusrezende/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matheusrezende/google-cloud-sdk/completion.zsh.inc'; fi
