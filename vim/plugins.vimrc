@@ -1,20 +1,20 @@
 " Ale configuration
 let g:ale_linters = {
- \   'javascript': ['eslint'],
- \   'typescript': ['eslint'],
- \   'typescriptreact': ['eslint'],
+ \   'javascript': ['eslint', 'prettier'],
+ \   'typescript': ['eslint', 'prettier'],
+ \   'typescriptreact': ['eslint', 'prettier'],
  \   'dart': ['dartanalyzer'],
  \   'scss': ['stylelint'],
  \}
 
 let g:ale_fixers = {
 \   'dart': ['dartfmt'],
-\   'javascript': ['eslint'],
-\   'typescript': ['eslint'],
-\   'typescriptreact': ['eslint'],
+\   'javascript': ['eslint', 'prettier'],
+\   'typescript': ['eslint', 'prettier'],
+\   'typescriptreact': ['eslint', 'prettier'],
 \}
 
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 
 "" NERDTree configuration
 let g:NERDTreeChDirMode=2
@@ -47,4 +47,14 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 
 
 
+
+"" git blamer vscode like
+let g:blamer_enabled = 1
+
+
+
+
+set guifont=Hack_Nerd_Font:h12
+let g:webdevicons_conceal_nerdtree_brackets=1
+let g:DevIconsEnableFoldersOpenClose = 1
 

@@ -73,7 +73,7 @@ plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+export EDITOR='vim'
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -153,7 +153,6 @@ _yargs_completions()
 }
 complete -F _yargs_completions graphql
 ###-end-graphql-completions-###
-
 
 
 

@@ -1,7 +1,6 @@
 " Keymappings configuration
 " NERDTREE Keymaps
 nnoremap <silent> <F2> :NERDTreeFind<CR>
-
 " Maps Leader to ,
 let mapleader=','
 
@@ -178,3 +177,13 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+
+
+" Vim test 
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>"

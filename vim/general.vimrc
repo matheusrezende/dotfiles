@@ -26,7 +26,9 @@ set smartcase
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
 
-
+" Files will be updated on external changes
+set autoread                                                                                                                                                                                    
+au CursorHold * checktime  
 "" COC BULSHIT
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -35,6 +37,7 @@ set hidden
 set nobackup
 set nowritebackup
 
+set encoding=UTF-8
 " Give more space for displaying messages.
 set cmdheight=2
 
