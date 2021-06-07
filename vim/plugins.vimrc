@@ -48,13 +48,4 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 
 
 
-"" git blamer vscode like
-let g:blamer_enabled = 1
-
-
-
-
-set guifont=Hack_Nerd_Font:h12
-let g:webdevicons_conceal_nerdtree_brackets=1
-let g:DevIconsEnableFoldersOpenClose = 1
 

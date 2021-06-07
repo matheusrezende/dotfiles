@@ -11,19 +11,14 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'tpope/vim-commentary'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'vim-test/vim-test'
   Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
   Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'APZelos/blamer.nvim'
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'dense-analysis/ale'
-  Plug 'ryanoasis/vim-devicons'
   Plug 'tpope/vim-repeat'
   Plug 'vim-airline/vim-airline'
-  Plug 'dyng/ctrlsf.vim'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'dyng/ctrlsf.vim'
   if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
   else
